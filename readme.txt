@@ -3,3 +3,4 @@ Git is free software.
 Git has a mutable index called stage.
 Git tracks changes of files2.
 My stupid boss still prefers SVN.
+it's git test.
