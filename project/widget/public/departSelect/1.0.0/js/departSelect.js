@@ -22,9 +22,15 @@
  var Depart = require('widget/public/departSelect/1.0.0/js/departSelect'),
  depart = new Depart($('.depart'));
     $.getJSON('json/data.json',function(data){
-         depart.init(data.RECORDS,fnConfirm,fnCancel);
+        var type = 0;
+         depart.init(data.RECORDS,type,fnConfirm,fnCancel);
     });
+ function fnConfirm(){//确定方法
 
+ }
+ function fnCancel(){//取消方法，默认为关闭窗口
+
+ }
  @example end
  */
 
@@ -41,9 +47,10 @@ var ctrl = function(container){
 
 }
 
-ctrl.prototype.init = function(data){
+ctrl.prototype.init = function(data,type,fnConfirm,fnCancel){
     var _this = this;
     this.data = data;
+    this.type = type;
     var array = new Array();
     for(var i in data){
         if(data[i].parentId == 0){
@@ -59,7 +66,8 @@ ctrl.prototype.init = function(data){
         data :array,
         title:'',
         str:'',
-        flag :false
+        flag :false,
+        type : type
     }));
 
     _this.bindEvent();
@@ -114,6 +122,10 @@ ctrl.prototype.bindEvent = function(){
         var $this = $(this);
         var $ul = $('.select-text').find('ul');
         if($this.is(':checked')){
+            if(_this.type != '1'&&$('.select-text>ul>li').length>0){
+                $this.prop('checked',false);
+                return;
+            }
             $ul.append('<li title="'+$(this).next().attr("data-name")+'" data-id="'+$(this).next().attr("data-id")+'">'+$(this).next().attr("data-name")+'<em>×</em></li>')
         }else{
             $ul.find('li[data-id="'+$(this).next().attr("data-id")+'"]').remove();
@@ -188,7 +200,8 @@ ctrl.prototype.reset = function(data,parentId,name,flag){//flag true:点击列�
         data :array,
         title:html,
         str:str || '',
-        flag :checkFlag
+        flag :checkFlag,
+        type:this.type
     }));
 }
 

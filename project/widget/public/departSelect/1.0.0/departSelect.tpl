@@ -8,9 +8,11 @@
     <%if(!title)%><span data-id="0">HOME</span><%else{%><%=title%><%}%>
 </div>
 <div class="select-content">
+    <%if(type =='1'){%>
     <div class="select-all">
         <label><input type="checkbox" <%if(flag){%>checked="<%=flag%>"<%}%>/>全选</label>
     </div>
+    <%}%>
     <ul class="select-content-ul">
         <%for(var i = 0;i<data.length;i++){%>
         <li><input type="checkbox" <%if(data[i].checked){%>checked="<%=data[i].checked%>"<%}%>/>
