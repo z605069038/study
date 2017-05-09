@@ -1,0 +1,223 @@
+@headFootBaseLineHeight:50px;
+@headFootInputLineHeight:24px;
+@black:#000;
+@white:#fff;
+@baseFontFamily:"Microsoft YaHei",Arial,Helvetica,sans-serif;
+@middleFontSize:14px;
+@borderTopColor:#50BAFB;
+
+.left{
+    float:left;
+}
+.index-top,.list-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @headFootBaseLineHeight;
+    z-index: 2;
+    line-height: @headFootBaseLineHeight;
+    min-width: 1024px;
+    .index-top-shadow{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: @black;
+        opacity: 0.6;
+    }
+    .title-logo{
+        width: 15%;
+        min-width: 260px;
+        text-align:center;
+        .index-top-logo,.list-top-logo{
+            margin-top: 10px;
+            width: 95px;
+            background:url('../img/logo.png') no-repeat top center;
+            height:28px;
+            display:inline-block;
+        }
+        .index-top-title{
+            font-size: 18px;
+            color: @white;
+            margin: 0 10px;
+        }
+    }
+    .index-top-search{
+        background-color: rgba(255,255,255,0,5);
+        border: 1px solid #bbb;
+        height: @headFootInputLineHeight;
+        margin-top: 12px;
+        width: 25%;
+        overflow: hidden;
+        position: absolute;
+        left: 20%;
+        top: 0px;
+        a{  
+            color:#010101;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            height: @headFootInputLineHeight;
+            width: 80px;
+            line-height: @headFootInputLineHeight;
+            text-align: center;
+            &:hover{
+                color: inherit;
+            }
+            border:none;
+        }
+        input::-webkit-input-placeholder {
+            color: @white !important;
+            text-align: center;
+            font-family:@baseFontFamily;
+        }
+
+        input{
+            border: none;
+            width: 70%;
+            background:none;
+            color: @white;
+            height: @headFootInputLineHeight;
+            position: absolute;
+            text-indent: 10px;
+            right: 30px;
+            left: 80px;
+        }
+        .index-top-search-icon{
+            margin-right: 4px;
+            margin-top: 4px;
+            line-height: @headFootInputLineHeight - 6;
+            cursor: pointer;
+            position: relative;
+            .globalSearch{
+                width:21px;
+                height:24px;
+                background:url('../img/index_search_icon.png') no-repeat center center;
+                display:inline-block;
+                float:right;
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+.index-top-userinfo, .index-top-set{
+    cursor: pointer;
+    position: absolute;
+    right: 70px;
+    top: 0;
+    color: @white;
+    height: @headFootBaseLineHeight;
+    width: 130px;
+}
+.index-top-set{
+    right: 0;
+    width: 60px;
+}
+.index-top-userinfo ul, .index-top-set ul{
+    display: none;
+}
+
+.index-top-nav{
+    position: absolute;
+    right: 100px;
+    top: 0;
+    left: 55%;
+}
+.index-top-nav ul li, .index-top-userinfo ul li, .index-top-set ul li{
+    float: left;
+    line-height: @headFootBaseLineHeight;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    height: @headFootBaseLineHeight;
+}
+.index-top-nav ul li a,.index-top-userinfo ul li a,.index-top-userinfo span,.index-top-set ul li a{
+    color: @white;
+    display: inline-block;
+    font-size: @middleFontSize;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-indent: 10px;
+    overflow: hidden;
+}
+
+.index-top-userinfo span{
+    background-image: url("../img/user.png");
+    background-repeat: no-repeat;
+    background-position: 6px 15px;;
+    text-indent: 34px;
+}
+.index-top-userinfo:hover span{
+    background-image: url("../img/userhover.png");
+}
+.index-top-set span{
+    display: block;
+    height: @headFootBaseLineHeight - 20;
+    margin-top: 10px;
+    border-left: 1px solid @white;
+    background:url(../img/set.png) no-repeat center center;
+}
+
+.index-top-set span img{
+    margin-left: 10px;
+    vertical-align: super;
+}
+
+.index-top-nav ul.menu-ul li a i,.index-top-userinfo .userinfo i{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid @white;
+    vertical-align: middle;
+    margin-left: 10px;
+    position: absolute;
+    top: 22px;
+}
+.index-top-userinfo .userinfo i{
+    right: 6px;
+}
+.index-top-nav ul.menu-ul li:hover a i,.index-top-userinfo:hover .userinfo i{
+    border-top-color: @borderTopColor;
+}
+
+.index-top-nav ul.menu-ul>li:hover, .index-top-userinfo:hover span, .index-top-set:hover{
+    background-color: @black;
+    opacity:0.8
+}
+
+.index-top-nav ul.menu-ul li:hover>a,.index-top-userinfo:hover .userinfo span, .index-top-userinfo ul li:hover a,
+.index-top-set ul li:hover a{
+    color: @borderTopColor;
+}
+.index-top-nav li ul, .index-top-userinfo ul, .index-top-set ul{
+    background-color: @black;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: @headFootBaseLineHeight;
+    display: none;
+}
+.index-top-set ul{
+    width: 100px;
+    right: 0;
+    left: auto;
+}
+.index-top-nav li:hover ul,.index-top-userinfo:hover ul, .index-top-set:hover ul{
+    display: block;
+}
+.index-top-nav li ul li, .index-top-userinfo ul li,.index-top-set ul li{
+    line-height: 30px;
+    vertical-align: middle;
+    height: 30px;
+}
+.index-top-nav li li, .index-top-userinfo ul li, .index-top-set ul li{
+    float: inherit;
+    width: 100%;
+    margin: 5px 0;
+}

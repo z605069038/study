@@ -1,0 +1,99 @@
+.depart{
+  width:450px;
+  padding:10px;
+  h2{
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 30px;
+  }
+  .select-text{
+    border: 1px solid #ccc;
+    padding: 0px 10px 8px;
+    overflow-y: auto;
+    height: 94px;
+    ul{
+      li{
+        float: left;
+        margin-right: 10px;
+        background: #3091f2;
+        padding:5px 5px;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 8px;
+        em{
+          display: inline-block;
+          border-left: 1px solid #fff;
+          font-style: normal;
+          margin-left: 5px;
+          padding-left: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .select-title{
+    line-height: 30px;
+    white-space: normal;
+    a.title-item{
+      display: inline-block;
+      color: #333;
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+      &:hover{
+        text-decoration: underline;
+        color: #428bca;
+      }
+    }
+  }
+  .select-content{
+    .select-all{
+      position: relative;
+      display: block;
+      min-height: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      label{
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        input{
+          margin-right: 10px;
+        }
+      }
+    }
+    ul{
+      margin: 0;
+      padding: 0 0 0 20px;
+      border-top: 1px solid #CCC;
+      max-height: 298px;
+      overflow-x: hidden;
+      li{
+        border-bottom: 1px solid #CCC;
+        position: relative;
+        cursor: pointer;
+        input{
+          margin-left: -15px;
+          position: absolute;
+          top: 50%;
+          margin-top: -7px;
+        }
+        a.item{
+          color:#000;
+          font-weight: bold;
+          padding:15px 0;
+          overflow: hidden;
+          margin-left: 5px;
+          display: block;
+          span.right{
+            color:#999;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+@zindex-tooltip:           1070;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+
+@border-radius-base:        4px;
+//== Tooltips
+//
+//##
+
+//** Tooltip max width
+@tooltip-max-width:           250px;
+@tooltip-min-height:          16px;
+//** Tooltip text color
+@tooltip-color:               #fff;
+//** Tooltip background color
+@tooltip-bg:                  rgba(70,76,91,.9);
+@tooltip-opacity:             .9;
+//** Tooltip arrow width
+@tooltip-arrow-width:         6px;
+@tooltip-arrow-marginwidth:   @tooltip-arrow-width - 1;
+@tooltip-arrow-paddingwidth:  @tooltip-arrow-width - 1;
+//** Tooltip arrow color
+@tooltip-arrow-color:         @tooltip-bg;
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-base:        @font-family-sans-serif;
+
+@line-height-base:        1.428571429; // 20/14
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.reset-text() {
+  font-family: @font-family-base;
+  // We deliberately do NOT reset fonts-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: @line-height-base;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+
+// Base class
+.tooltip {
+  position: absolute;
+  z-index: @zindex-tooltip;
+  display: block;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our fonts and text properties to avoid inheriting weird values.
+  .reset-text();
+  font-size: @font-size-small;
+
+  .opacity(0);
+
+  &.in     { .opacity(@tooltip-opacity); }
+  &.top    { margin-top:  -3px; padding: @tooltip-arrow-paddingwidth 0; }
+  &.top-left    { margin-top:  -3px; padding: @tooltip-arrow-paddingwidth 0; }
+  &.top-right    { margin-top:  -3px; padding: @tooltip-arrow-paddingwidth 0; }
+  &.right  { margin-left:  3px; padding: 0 @tooltip-arrow-paddingwidth; }
+  &.bottom { margin-top:   3px; padding: @tooltip-arrow-paddingwidth 0; }
+  &.bottom-left { margin-top:   3px; padding: @tooltip-arrow-paddingwidth 0; }
+  &.bottom-right { margin-top:   3px; padding: @tooltip-arrow-paddingwidth 0; }
+  &.left   { margin-left: -3px; padding: 0 @tooltip-arrow-paddingwidth; }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  max-width: @tooltip-max-width;
+  min-height: @tooltip-min-height;
+  padding: 8px 12px;
+  color: @tooltip-color;
+  text-align: center;
+  background-color: @tooltip-bg;
+  border-radius: @border-radius-base;
+  white-space: nowrap;
+}
+
+// Arrows
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+// Note: Deprecated .top-left, .top-right, .bottom-left, and .bottom-right as of v3.3.1
+.tooltip {
+  &.top .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-right .tooltip-arrow {
+    bottom: 0;
+    right: @tooltip-arrow-width;
+    margin-bottom: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width;
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-left .tooltip-arrow {
+    bottom: 0;
+    left: @tooltip-arrow-width;
+    margin-bottom: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width;
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.right .tooltip-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-right-color: @tooltip-arrow-color;
+  }
+  &.left .tooltip-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-left-color: @tooltip-arrow-color;
+  }
+  &.bottom .tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -@tooltip-arrow-marginwidth;
+    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    top: 0;
+    right: @tooltip-arrow-width;
+    margin-top: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    top: 0;
+    left: @tooltip-arrow-width;
+    margin-top: -@tooltip-arrow-marginwidth;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+  }
+}
