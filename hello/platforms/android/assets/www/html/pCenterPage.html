@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人中心</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../css/plugins/sm.css">
+    <link rel="stylesheet" href="../css/plugins/sm-extend.css">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/app.css">
+
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current" id="pCenterPage">
+        <!-- 头部 -->
+        <!--<header class="bar bar-nav">
+            <h1 class="title">个人中心</h1>
+        </header>-->
+
+        <!-- 尾部 -->
+        <nav class="bar bar-tab self-bgfff">
+            <a class="tab-item " href="./home.html" external>
+                <span class="icon self-icon self-icon-home"></span>
+                <span class="tab-label">服务中心</span>
+            </a>
+            <a class="tab-item" href="./toDonePage.html" external>
+                <span class="icon self-icon self-icon-wait"></span>
+                <span class="tab-label">待办事项</span>
+            </a>
+            <a class="tab-item active" href="#">
+                <span class="icon self-icon self-icon-me active"></span>
+                <span class="tab-label">个人中心</span>
+            </a>
+        </nav>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <!-- 登录信息 -->
+            <div class="pCenter-info">
+                <div class="pCenter-info-container">
+                    <img src="../images/personalcenter_profilephoto.png" alt="">
+                </div>
+                <h1 class="pCenter-info-h1">北京大学 - 张华</h1>
+                <small>系统管理员</small>
+            </div>
+
+            <div class="list-block">
+                <ul class="self-ul">
+                    <li class="item-content item-link self-minHeight52">
+                        <div class="item-media">
+                            <i class="icon self-icon self-icon-infor"></i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">个人信息</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link self-minHeight52">
+                        <div class="item-media">
+                            <i class="icon self-icon self-icon-passw"></i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">修改密码</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link self-minHeight52">
+                        <div class="item-media">
+                            <i class="icon self-icon self-icon-about"></i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">关于软件</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul class="self-ul">
+                    <li><a class="item-link list-button" external id="quitBtn">退出帐号</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/plugins/zepto.js" charset='utf-8'></script>
+<script type="text/javascript">
+    $.config = {router: false}
+</script>
+<script src="../js/plugins/sm.js" charset='utf-8'></script>
+<script src="../js/plugins/sm-extend.js" charset='utf-8'></script>
+<script src="../js/common.js"></script>
+<script src="../js/pCenterPage.js"></script>
+</body>
+</html>

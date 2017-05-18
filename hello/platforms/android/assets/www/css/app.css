@@ -1,0 +1,721 @@
+/* 登录页start */
+.login-bg{
+    background-image:  url("../images/login/login_bg.png"), linear-gradient(to bottom, #4ca5f7, #8ac4fa);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: contain, cover;
+}
+
+.list-block .login-ul{
+    background-color: transparent;
+    color: #fff;
+}
+
+.list-block .login-ul:before,
+.list-block .login-ul:after{
+    background-color: transparent;
+}
+
+.list-block .login-item-inner:after{
+    background-color: transparent;
+}
+
+.list-block .login-item-content{
+    padding-left: 0;
+}
+
+.list-block .login-item-content input{
+    color: #fff;
+}
+
+.list-block li .login-item-content:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+
+    background-color: #e7e7e7;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+    .list-block li .login-item-content:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    .list-block li .login-item-content:after{
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+}
+
+::-webkit-input-placeholder{
+    color: #b2daff;
+}
+
+.login-getCode-btn{
+    border: 1px solid #fff;
+    color: #fff;
+
+    font-size: 0.6rem;
+}
+
+.button.login-submit-btn{
+    border: none;
+    font-size: 0.9rem;
+    color: #4ca5f7;
+
+    background-color: #fff;
+    box-shadow: 0 5px 14px 0 rgba(17,112,200, 0.3);
+}
+
+.login-foot{
+    background-color: transparent;
+    text-align: center;
+}
+
+.login-foot:before{
+    background-color: transparent;
+}
+
+.login-foot a{
+    color: #fff;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+/* 登录页end */
+
+/* 服务中心start */
+.home-headerhome-header{
+    width: 100%;
+
+    background-color: #4CA6F7;
+}
+
+.bar:after{
+    background-color: transparent;
+}
+
+.home-title{
+    font-size: 1rem;
+    color: #fff;
+}
+
+.home-title:after{
+    background-color: transparent!important;
+}
+
+.home-bottom{
+    margin-bottom: 20px;
+}
+
+.home-block{
+    /*padding: 10px;*/
+}
+
+.home-block img{
+    display: block;
+
+    width: 60%;
+    max-width: 100px;
+    padding: 7px;
+    margin: auto;
+
+    color: #000;
+}
+
+.home-block span{
+    display: block;
+
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.home-block-small img{
+    width: 50%;
+    height: 50%;
+}
+
+.home-block-small span{
+    font-size: 0.6rem;
+}
+
+.home-parent{
+    position: relative;
+    /*min-height: 10%;*/
+    margin: 0 auto 3rem  auto;
+
+    /*background-color: #4CA6F7;*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .home-parent{
+        margin-bottom: 8rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .home-parent{
+        margin-bottom: 12rem;
+    }
+}
+
+.home-parent img{
+    position: absolute;
+    top: -4rem;
+    z-index: -1;
+
+    width: 100%;
+}
+
+
+.home-parent-contain{
+    position: relative;
+    bottom: -2.4rem;
+    width: 50%;
+    /*height: 10%;
+    border: 0.5rem solid #fff;*/
+    margin: auto;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 320px){
+    .home-parent-contain{
+        bottom: -1.4rem;
+    }
+}
+
+@media screen and (width: 360px){
+    .home-parent-contain{
+        bottom: -2rem;
+    }
+}
+
+/*.home-parent-contain:before{
+    content: '';
+    position: absolute;
+    left: -118px;
+    top: 10px;
+    width: 108px;
+    height: 20px;
+    background-color: #4ca6f7;
+    border-bottom-right-radius: 20px;
+    !*box-shadow: 2px 2px 2px #aaa;*!
+}*/
+
+.home-child {
+    padding: 0.3rem 0.3rem;
+    margin: auto;
+    background-color: #4ca6f7;
+    box-shadow: 0 0 0.3rem #908686;
+    border-radius: 0.7rem;
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+    /* 公告提示 */
+.home-post{
+    margin: 1rem auto 1.75rem;
+}
+
+.home-inner{
+    margin-left: 0!important;
+}
+
+.home-post-title{
+    max-width: 3rem!important;
+    font-size: 0.8rem;
+    color: #ec7357;
+}
+
+.home-post-after{
+    max-width: 80%!important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.home-post-after span{
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 服务中心end */
+
+/* 报送消息start */
+.message-list-block{
+    margin-top: 0;
+}
+
+.message-list-block .item-content:not(:last-child):after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #e7e7e7;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+    .message-list-block .item-content:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    .message-list-block .item-content:after{
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+}
+
+.message-media img{
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 50%;
+}
+
+.message-title{
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.message-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    color: #afafaf!important;
+}
+
+.message-subtitle{
+    font-size: 15px;
+    color: #999;
+}
+/* 报送消息end */
+
+
+
+/* 通知公告start */
+.bulletin-list-block{
+    margin-top: 0;
+}
+
+.bulletin-list-block .item-content:not(:last-child):after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #e7e7e7;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+    .bulletin-list-block .item-content:not(:last-child):after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    .bulletin-list-block .item-content:not(:last-child):after{
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+}
+
+
+
+.bulletin-title{
+    font-size: 17px;
+    color: #333;
+}
+
+.bulletin-time{
+    /* 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    color: #afafaf;
+}
+
+.bulletin-subtitle{
+    font-size: 15px;
+    color: #999;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 通知公告end */
+
+/* 通知公告详细信息start */
+.bulletinDetail-container{
+    width: 100%;
+    height: 9.8rem;
+
+    background-color: #fff;
+
+    text-align: center;
+}
+
+.bulletinDetail-infor{
+    position: relative;
+    height: 5.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    color: #333;
+}
+
+.bulletinDetail-infor:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #e7e7e7;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+    .bulletinDetail-infor:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    .bulletinDetail-infor:after{
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+}
+
+.bulletinDetail-infor i{
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+}
+
+.bulletinDetail-infor span{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.bulletinDetail-infor p{
+    margin-top: 1rem;
+
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.button.bulletinDetailBtn-no{
+    width: 7.9rem;
+
+    height: 2rem;
+    margin: auto;
+    border: none;
+
+    line-height: 2rem;
+    border-radius: 1rem;
+
+    font-size: 0.85rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.button.button-fill.bulletinDetailBtn-ok{
+    width: 90%;
+
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 1rem;
+
+    font-size: 0.85rem;
+    background-color: #4CA6F7!important;
+}
+
+/* 通知公告详细信息end */
+
+/* 通知公告详细信息2start */
+
+
+/* 通知公告详细信息2end */
+
+
+/* 报表统计start */
+.report-row{
+    margin-bottom: 0.6rem;
+}
+
+.report-row a.item-content{
+    padding-left: 0;
+}
+
+/* 报表统计end*/
+
+/* 报送统计start */
+.reportSend-label{
+    margin-left: 0;
+    font-size: 0.9rem;
+}
+
+.reportSend-content input{
+    width: 100%;
+    border: none;
+}
+
+.reportSend-content select{
+    width: 100%;
+    padding: 2%;
+    border: 1px solid #afafaf;
+    background-color: #fff;
+}
+
+/* 报送统计end */
+
+/* 通讯录start */
+.list-block .contactsDetails-inner{
+    padding-left: 0.75rem;
+
+    font-size: 0.75rem;
+}
+
+.contactsDetails-inner .contactsDetails-title{
+
+}
+
+
+/* 重要文件start */
+.file-success{
+    position: relative;
+}
+
+.file-success-tag{
+    position: absolute;
+    right: -0.5rem;
+    bottom: 0;
+
+    width: 1rem;
+    height: 1rem;
+    max-width: 25px;
+    max-height: 25px;
+
+    background: url("../images/icon/file/check-icon.png") no-repeat;
+    background-size: cover;
+}
+
+
+.file-inner{
+    align-self: center!important;
+}
+
+.file-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal!important;
+    font-size: 17px;
+    color: #333;
+    overflow: hidden;
+}
+
+.file-after{
+    /* 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    color: #afafaf;
+}
+
+.file-after span{
+    margin-left: 10px;
+}
+
+.file-subtitle{
+    font-size: 15px;
+    color: #999;
+}
+/* 重要文件end */
+
+/* 个人中心start */
+.pCenter-info{
+
+    padding-top: 1.9rem;
+    padding-bottom: 1.6rem;
+    color: #fff;
+    text-align: center;
+
+    background: url("../images/personalcenter_bg.png") no-repeat;
+    background-size: cover;
+
+}
+
+.pCenter-info-container{
+    display: inline-block;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+    box-shadow: 3px 3px 16px #1170c8;
+
+    text-align: center;
+}
+
+.pCenter-info img{
+    width: 5rem;
+    height: 5rem;
+
+}
+
+.pCenter-info-h1{
+    margin-bottom: 0.2rem;
+
+    font-size: 1rem;
+}
+
+/* 个人中心end */
+
+
+/* 待办事项start */
+.wait-status-ok{
+    color: #3db679;
+}
+.wait-status-process{
+    color: #ec7357;
+}
+
+/* 待办事项end */
+
+
+/* 个人进度start */
+.personalSearch-inputs{
+    margin-bottom: 1rem;
+}
+
+
+.personalProgress-bar{
+    height: 3.5rem;
+    padding: 0.75rem 0;
+}
+
+
+.personalProgress-bar .button.contitueSearchBtn{
+    position: relative;
+    top: 0;
+
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+
+    border: none;
+
+    background-color: #4CA6F7;
+    box-shadow: none;
+
+    color: #fff;
+}
+
+.personalSearch-notice{
+    position: relative;
+
+    padding-top: 0.5rem;
+
+    color: #afafaf;
+    font-size: 0.5rem;
+}
+
+.personalSearch-notice:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #e7e7e7;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+/* 个人进度end */
+
+
+/* 关于软件start */
+.about-software{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-software h1{
+    color: #4ca5f7;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.about-software small{
+    font-size: 0.65rem;
+    color: #afafaf;
+}
+
+.about-software-copyright{
+    position: absolute;
+    bottom: 3rem;
+
+    width: 100%;
+    text-align: center;
+}
+
+.about-software-copyright p{
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.6rem;
+    color: #afafaf;
+}
+/* 关于软件end */
