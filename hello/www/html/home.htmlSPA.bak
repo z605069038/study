@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>学位中心报送平台</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../css/plugins/sm.css">
+    <link rel="stylesheet" href="../css/plugins/sm-extend.css">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <style>
+        -webkit-appearance: none;
+    </style>
+</head>
+<body>
+<div class="page-group" style="background: #fff" id="homePage">
+    <!-- 服务中心模块 -->
+    <div class="page page-current" style="background: #fff">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <h1 class="title home-title">学位备案</h1>
+        </header>
+
+        <!-- 尾部 -->
+        <nav class="bar bar-tab self-nav">
+            <a class="tab-item" href="#">
+                <span class="icon self-icon self-icon-home active"></span>
+                <span class="tab-label">服务中心</span>
+            </a>
+            <a class="tab-item" href="../html/toDonePage.html" external>
+                <span class="icon self-icon self-icon-wait"></span>
+                <span class="tab-label">待办事项</span>
+            </a>
+            <a class="tab-item" href="../html/pCenterPage.html" external>
+                <span class="icon self-icon self-icon-me"></span>
+                <span class="tab-label">个人中心</span>
+            </a>
+        </nav>
+        <!-- 内容 -->
+        <div class="content">
+            <!-- 头部导航 -->
+            <div class="row self-bg4CA6F7">
+                <div class="col-25">
+                    <a class="home-block" href="./home/home_message.html" external>
+                        <img src="../images/home/home_icon_message.png" alt="">
+                        <span>报送消息</span>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a class="home-block" href="./home/home_bulletin.html" external>
+                        <img src="../images/home/home_icon_bulletin.png" alt="">
+                        <span>通知公告</span>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a class="home-block" href="./toDonePage.html" external>
+                        <img src="../images/home/home_icon_schedule.png" alt="">
+                        <span>待办事项</span>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a class="home-block" href="./home/home_report.html" external>
+                        <img src="../images/home/home_icon_report.png" alt="">
+                        <span>报表统计</span>
+                    </a>
+                </div>
+            </div>
+            <div class="home-parent">
+                <!--<object style="width: 100%; position: absolute; top: -76px; z-index: -100" type="image/svg+xml" data="../css/SVG/home_bg.svg" class="logo"></object>-->
+                <div class="home-parent-contain">
+                    <p class="home-child">北京大学-类别操作员</p>
+                </div>
+            </div>
+
+            <!-- 功能模块 -->
+            <div class="row">
+                <div class="col-25 home-bottom">
+                    <a class="home-block home-block-small" href="./home/home_reportProgress.html" external>
+                        <img src="../images/home/home_icon_rate.png" alt="">
+                        <span class="self-color000">报送进度</span>
+                    </a>
+                </div>
+                <div class="col-25 home-bottom">
+                    <a class="home-block home-block-small" href="./home/home_personalProgress.html" external>
+                        <img src="../images/home/home_icon_personalrate.png" alt="">
+                        <span class="self-color000">个人进度</span>
+                    </a>
+                </div>
+
+                <div class="col-25 home-bottom">
+                    <a class="home-block home-block-small" href="./home/home_contacts.html" external>
+                        <img src="../images/home/home_icon_addresslist.png" alt="">
+                        <span class="self-color000">通讯录</span>
+                    </a>
+                </div>
+                <div class="col-25 home-bottom">
+                    <a class="home-block home-block-small" href="./home/home_history.html" external>
+                        <img src="../images/home/home_icon_historicaldata.png" alt="">
+                        <span class="self-color000">历史数据</span>
+                    </a>
+                </div>
+                <div class="col-25 home-bottom">
+                    <a class="home-block home-block-small" href="./home/home_majorDoc.html" external>
+                        <img src="../images/home/home_icon_file.png" alt="">
+                        <span class="self-color000">重要文件</span>
+                    </a>
+                </div>
+                <div class="col-25 home-bottom">
+                    <a class="home-block home-block-small" href="">
+                        <img src="../images/home/home_icon_loading.png" alt="">
+                        <span class="self-color000">待上线...</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-block home-post">
+                <ul>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner home-inner">
+                            <div class="item-title home-post-title">公告：</div>
+                            <div class="item-after pull-left home-post-after">国庆节期间系统停止开发，对系统进行维护</div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+      </div>
+    </div>
+
+    <!-- 报送消息模块 -->
+    <div class="page" id="home-message">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">报送消息</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="list-block media-list message-list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media message-media">
+                            <img src="../images/message/message_icon_sjbs.png" width="44">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title message-title">
+                                    单位管理员 打回数据
+                                </div>
+                                <div class="item-after message-time">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-subtitle message-subtitle">
+                                130条
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media message-media">
+                            <img src="../images/message/message_icon_sjbb.png" width="44">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title message-title">
+                                    单位管理员 数据反馈
+                                </div>
+                                <div class="item-after message-time">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-subtitle message-subtitle">
+                                130条
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media message-media">
+                            <img src="../images/message/message_icon_sjcx.png" width="44">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title message-title">
+                                    单位管理员 报送上网
+                                </div>
+                                <div class="item-after message-time">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-subtitle message-subtitle">
+                                130条
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media message-media">
+                            <img src="../images/message/message_icon_sjxg.png" width="44">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title message-title">
+                                    单位管理员 打回数据
+                                </div>
+                                <div class="item-after message-time">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-subtitle message-subtitle">
+                                130条
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media message-media">
+                            <img src="../images/message/message_icon_zpbb.png" width="44">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title message-title">
+                                    单位管理员 打回数据
+                                </div>
+                                <div class="item-after message-time">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-subtitle message-subtitle">
+                                130条
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通知公告模块 -->
+    <div class="page" id="home-bulletin">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">通知公告</h1>
+        </header>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <div class="list-block  media-list bulletin-list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title bulletin-title">
+                                    平台停机维护公告
+                                </div>
+                                <div class="item-after self-minWidth40 bulletin-time">
+                                    今日
+                                </div>
+                            </div>
+                            <div class="item-title-row">
+                                <div class="item-title bulletin-subtitle">
+                                    这里会说明具体的公告信息，请点击查看最请点击查看最
+                                </div>
+                                <div class="item-after self-minWidth40 self-tip-container">
+                                    <span class="self-tip"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title bulletin-title">
+                                    平台停机维护公告
+                                </div>
+                                <div class="item-after self-minWidth40 bulletin-time">
+                                    今日
+                                </div>
+                            </div>
+                            <div class="item-title-row">
+                                <div class="item-title bulletin-subtitle">
+                                    这里会说明具体的公告信息，请点击查看最
+                                </div>
+                                <div class="item-after self-minWidth40 self-tip-container" style="visibility: hidden">
+                                    <span class="self-tip"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a class="item-content" href="#home-bulletinDetail">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title bulletin-title">
+                                        南京大学单位管理员
+                                    </div>
+                                    <div class="item-after self-minWidth40 bulletin-time">
+                                        04-06
+                                    </div>
+                                </div>
+                                <div class="item-title-row">
+                                    <div class="item-title bulletin-subtitle">
+                                        这里会说明具体的公告信息，请点击查看最
+                                    </div>
+                                    <div class="item-after self-minWidth40 self-tip-container">
+                                        <span class="self-tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通知公告详细子模块 -->
+    <div class="page" id="home-bulletinDetail">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">通知公告</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 待办事项模块 -->
+    <div class="page" id="home-wait">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">待办事项</h1>
+        </header>
+    </div>
+
+    <!-- 报表统计模块 -->
+    <div class="page" id="home-report">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">报表统计</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="content-padded">
+                <div class="list-block self-list-block">
+                    <div class="row">
+                        <div class="col-25 report-row">
+                            <a class="item-content" href="#home-reportSend">
+                                <div class="self-item-content">
+                                    <img class="self-media self-oval self-shadow" src="../images/report/bulletin_icon_bstj.png" alt="" width="60px">
+                                    <h1 class="self-title self-title-000">报送统计</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-25 report-row">
+                            <a class="item-content" href="">
+                                <div class="self-item-content">
+                                    <img class="self-media self-oval self-shadow" src="../images/report/bulletin_icon_bsnb.png" alt="" width="60px">
+                                    <h1 class="self-title self-title-000">报送年报</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-25 report-row">
+                            <a class="item-content" href="#home-reportSend">
+                                <div class="self-item-content">
+                                    <img class="self-media self-oval self-shadow" src="../images/report/bulletin_icon_bstj.png" alt="" width="60px">
+                                    <h1 class="self-title self-title-000">报送统计</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-25 report-row">
+                            <a class="item-content" href="">
+                                <div class="self-item-content">
+                                    <img class="self-media self-oval self-shadow" src="../images/report/bulletin_icon_bsnb.png" alt="" width="60px">
+                                    <h1 class="self-title self-title-000">报送年报</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-25 report-row">
+                            <a class="item-content" href="#home-reportSend">
+                                <div class="self-item-content">
+                                    <img class="self-media self-oval self-shadow" src="../images/report/bulletin_icon_bstj.png" alt="" width="60px">
+                                    <h1 class="self-title self-title-000">报送统计</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-25 report-row">
+                            <a class="item-content" href="">
+                                <div class="self-item-content">
+                                    <img class="self-media self-oval self-shadow" src="../images/report/bulletin_icon_bsnb.png" alt="" width="60px">
+                                    <h1 class="self-title self-title-000">报送年报</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 报送统计子模块 -->
+    <div class="page" id="home-reportSend">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <a class="icon pull-right open-panel" style="max-height: 44px" href="#" data-panel="#wjssb">
+                <span class="icon self-icon self-icon-filter"></span>
+            </a>
+            <h1 class="title home-title">报送统计</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="content-block-title text-center self-content-block-title">
+                学位授予信息报送情况汇总表
+            </div>
+            <div class="self-gird">
+                <div class="self-gird-head">
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                合计
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">225</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">120</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">242500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="self-grid-content">
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                北京
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">25</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">20</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">98800</span>
+                        </div>
+                    </div>
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                江苏南京
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">25</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">20</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">98800</span>
+                        </div>
+                    </div>
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                浙江杭州
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">25</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">20</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">98800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 报送统计筛选右滑子模块 -->
+    <div class="panel-overlay"></div>
+    <!-- 右侧划出窗口内容 -->
+    <div class="panel panel-right panel-reveal theme-white " id="wjssb">
+        <div class="content-block">
+            <!--<p><a href="#" class="close-panel">关闭</a></p>-->
+            <div class="content-block-title reportSend-label">
+                报送时间：
+            </div>
+            <div class="row reportSend-content">
+                <div class="col-40">
+                    <input type="text" placeholder="开始时间">
+                </div>
+                <div class="col-20">
+                    --
+                </div>
+                <div class="col-40">
+                    <input type="text" placeholder="结束时间">
+
+                </div>
+            </div>
+            <div class="content-block-title reportSend-label">
+                学位报送类别：
+            </div>
+            <div class="row reportSend-content">
+                <div class="col-100">
+                    <select>
+                        <option value="">全部</option>
+                        <option value="">不知道</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-block-title reportSend-label">
+                省市区域：
+            </div>
+            <div class="row reportSend-content">
+                <div class="col-100">
+                    <select>
+                        <option value="">全部</option>
+                        <option value="">不知道</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bar bar-tab bar-footer-secondary">
+                <div class="row">
+                    <div class="col-50">
+                        <a clsss="tab-item" href="#" class="button button-big button-fill button-danger">重置</a>
+                    </div>
+                    <div class="col-50">
+                        <a href="#" class="button button-big button-fill button-success">提交</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 报送进度模块 -->
+    <div class="page" id="home-reportProgress">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">报送进度</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="list-block media-list self-list-block">
+                <ul>
+                    <li>
+                        <a href="#" class="item-content self-content">
+                            <div class="item-inner self-item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title self-title">
+                                        普通本科学士
+                                    </div>
+                                </div>
+                                <div class="item-subtitle self-item-subtitle">
+                                    <span>234条</span>
+                                    <span> | </span>
+                                    <span>上报时间：2017-04-06 12:00:00</span>
+                                </div>
+                                <div class="self-progress-container">
+                                    <div class="self-progress-bar">
+                                        <div class="self-progress-bar-item active"></div>
+                                        <div class="self-progress-bar-item active"></div>
+                                        <div class="self-progress-bar-item"></div>
+                                        <div class="self-progress-bar-item"></div>
+                                        <div class="self-progress-bar-item"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item-text self-item-text" style="color: #4ca5f7;">
+                                    <span>省学位办</span>
+                                    <span>审核通过</span>
+                                    <span>2017-04-10 12:00:00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 个人进度模块 -->
+    <div class="page" id="home-personalProgress">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">个人进度</h1>
+        </header>
+    </div>
+
+    <!-- 通讯录模块 -->
+    <div class="page" id="home-contacts">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <a class="icon pull-right" style="max-height: 44px" href="#home-contactsSwitch">
+                <span class="icon self-icon self-icon-switch"></span>
+            </a>
+            <h1 class="title home-title">通讯录</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="buttons-tab self-buttons-tab">
+                <a href="#allPeople" class="tab-link active button self-tab-link-round">
+                    <span>全部</span>
+                </a>
+                <a href="#categoryOperator" class="tab-link button self-tab-link-round">
+                    <span>类别操作员</span>
+                </a>
+                <a href="#unitManager" class="tab-link button self-tab-link-round">
+                    <span>单位管理员</span>
+                </a>
+                <a href="#provinceSchool" class="tab-link button self-tab-link-round">
+                    <span>省学位办</span>
+                </a>
+            </div>
+            <div>
+                <div class="tabs">
+                    <!-- 全部 -->
+                    <div id="allPeople" class="tab active">
+                        <div class="searchbar self-search-bar">
+                            <a class="searchbar-cancel">取消</a>
+                            <div class="search-input">
+                                <label class="icon icon-search" for=""></label>
+                                <input id="" type="search" placeholder="搜索" />
+                            </div>
+                        </div>
+                        <div class="list-block media-list self-list-block">
+                            <ul>
+                                <li>
+                                    <a href="#home-contactsDetails" class="item-content self-content">
+                                        <div class="item-media">
+                                            <div class="self-media-custom">
+                                                花
+                                            </div>
+                                        </div>
+                                        <div class="item-inner self-item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title self-title">花某某</div>
+                                            </div>
+                                            <div class="item-subtitle self-item-subtitle">类别操作员</div>
+                                            <div class="item-text self-item-text">
+                                                010-79874989
+                                                <span>北京</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="self-item-aside">
+                                        <span class="icon self-icon self-icon-call"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-content self-content">
+                                        <div class="item-media">
+                                            <div class="self-media-custom">
+                                                花
+                                            </div>
+                                        </div>
+                                        <div class="item-inner self-item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title self-title">花某某</div>
+                                            </div>
+                                            <div class="item-subtitle self-item-subtitle">类别操作员</div>
+                                            <div class="item-text self-item-text">
+                                                010-79874989
+                                                <span>北京</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="self-item-aside">
+                                        <span class="icon self-icon self-icon-call"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-content self-content">
+                                        <div class="item-media">
+                                            <div class="self-media-custom">
+                                                花
+                                            </div>
+                                        </div>
+                                        <div class="item-inner self-item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title self-title">花某某</div>
+                                            </div>
+                                            <div class="item-subtitle self-item-subtitle">类别操作员</div>
+                                            <div class="item-text self-item-text">
+                                                010-79874989
+                                                <span>北京</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="self-item-aside">
+                                        <span class="icon self-icon self-icon-call"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 类别操作员 -->
+                    <div id="categoryOperator" class="tab">
+                        <div class="searchbar self-search-bar">
+                            <a class="searchbar-cancel">取消</a>
+                            <div class="search-input">
+                                <label class="icon icon-search" for=""></label>
+                                <input id="" type="search" placeholder="搜索" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="unitManager" class="tab">
+                        <div class="searchbar self-search-bar">
+                            <a class="searchbar-cancel">取消</a>
+                            <div class="search-input">
+                                <label class="icon icon-search" for=""></label>
+                                <input id="" type="search" placeholder="搜索" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="provinceSchool" class="tab">
+                        <div class="searchbar self-search-bar">
+                            <a class="searchbar-cancel">取消</a>
+                            <div class="search-input">
+                                <label class="icon icon-search" for=""></label>
+                                <input id="" type="search" placeholder="搜索" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 通讯录详情子模块 -->
+    <div class="page" id="home-contactsDetails">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">通讯录详情</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="self-contacts-container">
+                <div class="self-contacts-media">
+                    花
+                </div>
+                <div style="text-align: center;">
+                    <div>
+                        花某某
+                    </div>
+                    <div>
+                        单位管理员 - 北京大学
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-inner contactsDetails-inner">
+                            <div class="item-title">
+                                办公室电话
+                            </div>
+                            <div class="item-after">
+                                010-73817979<span>北京</span>
+                            </div>
+                            <div class="item-after">
+                                <span class="icon self-icon self-icon-call"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-inner contactsDetails-inner">
+                            <div class="item-title">
+                                手机号码
+                            </div>
+                            <div class="item-after">
+                                1888888888
+                            </div>
+                            <div class="item-after">
+                                <span class="icon self-icon self-icon-call"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-inner contactsDetails-inner">
+                            <div class="item-title contactsDetails-title">
+                                办公室地址
+                            </div>
+                            <div class="item-after">
+                                北京市海淀区北京大学XXXX楼888
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 单位管理员通讯录互换模块 -->
+    <div class="page" id="home-contactsSwitch">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">单位管理员通讯录互换</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="tab active">
+                <div class="searchbar self-search-bar">
+                    <a class="searchbar-cancel">取消</a>
+                    <div class="search-input">
+                        <label class="icon icon-search" for=""></label>
+                        <input id="" type="search" placeholder="搜索" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-block self-list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">北京大学</div>
+                            <div class="item-after">
+                                <span class="icon self-icon self-icon-switch-blue"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">清华大学</div>
+                            <div class="item-after">
+                                <span class="icon self-icon self-icon-switch-blue"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">中国语言大学</div>
+                            <div class="item-after">
+                                <span class="icon self-icon self-icon-switch-blue"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">中国航天航空大学</div>
+                            <div class="item-after">
+                                <span class="icon self-icon self-icon-switch-blue"></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 历史数据模块 -->
+    <div class="page" id="home-history">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">历史数据</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="list-block self-list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                姓名
+                            </div>
+                            <div class="item-after">
+                                张华
+                                <span>已上网</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                证件号码
+                            </div>
+                            <div class="item-after">
+                                330721199789870971
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                证书编号
+                            </div>
+                            <div class="item-after">
+                                2079798999
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                性别
+                            </div>
+                            <div class="item-after">
+                                男
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                出生日期
+                            </div>
+                            <div class="item-after">
+                                1992年1月1日
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                学位授予单位
+                            </div>
+                            <div class="item-after">
+                                XXXXXXXXX
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                专业学位领域
+                            </div>
+                            <div class="item-after">
+                                XXXXXXXXX
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                获学位名称
+                            </div>
+                            <div class="item-after">
+                                学历教育博士学位
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                获学位日期
+                            </div>
+                            <div class="item-after">
+                                2017年5月3日
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                                学位电子注册备案编号
+                            </div>
+                            <div class="item-after">
+                                3134452525
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 重要文件模块 -->
+    <div class="page" id="home-majorDoc">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="/homePage"></a>
+            <h1 class="title home-title">重要文件</h1>
+        </header>
+
+        <!-- 搜索栏 -->
+        <div class="bar bar-header-secondary">
+            <div class="searchbar self-search-bar">
+                <a class="searchbar-cancel">取消</a>
+                <div class="search-input">
+                    <label class="icon icon-search" for="search"></label>
+                    <input id="search" type="text" placeholder="'搜索" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容-->
+        <div class="content">
+            <div class="list-block media-list self-list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media media-list file-success">
+                            <img src="../images/file/home_file_icon_pdf.png" alt="" width="60px">
+                            <span class="file-success-tag"></span>
+                        </div>
+                        <div class="item-inner file-inner">
+                            <div class="item-title-row">
+                                <div class="item-title file-title">
+                                    关于2017年博士学位报送工作的通知关于2017年博士学位报送工作的通知关于2017年博士学位报送工作的通知
+                                </div>
+                                <div class="item-after file-after">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-title-row file-subtitle">
+                                <div class="item-title">
+                                    <span>30KB</span>
+                                    <span>上传者：学位中心</span>
+                                </div>
+                                <div class="item-after file-after">
+                                    <span class="self-icon-supsmall self-icon self-icon-view"></span>
+                                    <!--<span class="self-icon-supsmall icon self-icon self-icon-download"></span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media media-list">
+                            <img src="../images/file/home_file_icon_word.png" alt="" width="60px">
+                        </div>
+                        <div class="item-inner file-inner">
+                            <div class="item-title-row">
+                                <div class="item-title file-title">
+                                    关于2017年博士学位报送
+                                </div>
+                                <div class="item-after file-after">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-title-row file-subtitle">
+                                <div class="item-title">
+                                    <span>30KB</span>
+                                    <span>上传者：学位中心</span>
+                                </div>
+                                <div class="item-after file-after">
+                                    <span class="self-icon-supsmall self-icon self-icon-view"></span>
+                                    <span class="self-icon-supsmall icon self-icon self-icon-download"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media media-list">
+                            <img src="../images/file/home_file_icon_excel.png" alt="" width="60px">
+                        </div>
+                        <div class="item-inner file-inner">
+                            <div class="item-title-row">
+                                <div class="item-title file-title">
+                                    关于2017年博士学位报送
+                                </div>
+                                <div class="item-after file-after">
+                                    04-06
+                                </div>
+                            </div>
+                            <div class="item-title-row file-subtitle">
+                                <div class="item-title">
+                                    <span>30KB</span>
+                                    <span>上传者：学位中心</span>
+                                </div>
+                                <div class="item-after file-after">
+                                    <span class="self-icon-supsmall self-icon self-icon-view"></span>
+                                    <span class="self-icon-supsmall icon self-icon self-icon-download"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/plugins/zepto.js" charset='utf-8'></script>
+<script src="../js/plugins/sm.js" charset='utf-8'></script>
+<script src="../js/plugins/sm-extend.js" charset='utf-8'></script>
+<script type="text/javascript">
+    $.config = {router: false};
+
+    $.init();
+
+</script>
+</body>
+</html>

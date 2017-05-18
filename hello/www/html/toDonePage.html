@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>待办事项</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../css/plugins/sm.css">
+    <link rel="stylesheet" href="../css/plugins/sm-extend.css">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <h1 class="title self-title">待办事项</h1>
+        </header>
+
+        <!-- 尾部 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item" href="./home.html" external>
+                <span class="icon self-icon self-icon-home"></span>
+                <span class="tab-label">服务中心</span>
+            </a>
+            <a class="tab-item active" href="#">
+                <span class="icon self-icon self-icon-wait active"></span>
+                <span class="tab-label">待办事项</span>
+            </a>
+            <a class="tab-item" href="./pCenterPage.html" external>
+                <span class="icon self-icon self-icon-me"></span>
+                <span class="tab-label">个人中心</span>
+            </a>
+        </nav>
+        <div class="content pull-to-refresh-content">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+
+            <!-- 这里是页面内容区 -->
+            <div class="list-block media-list self-list-block">
+                <ul class='list-UL'>
+                    <li class="item-content self-content">
+                        <div class="item-inner self-item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title self-title">
+                                    省学位办反馈张华等20位同学学位报送信息
+                                </div>
+                            </div>
+                            <div class="item-subtitle self-item-subtitle">
+                                2017-04-06 12:00:00
+                            </div>
+                            <div class="item-text self-item-text">
+                                <div class="item-title">
+                                    <span>反馈数量：20</span> |
+                                    <span>解决数量：10</span>
+                                    <span class="pull-right wait-status-process">正在解决</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content self-content">
+                        <div class="item-inner self-item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title self-title">
+                                    省学位办反馈张华等20位同学学位报送信息
+                                </div>
+                            </div>
+                            <div class="item-subtitle self-item-subtitle">
+                                2017-04-06 12:00:00
+                            </div>
+                            <div class="item-text self-item-text">
+                                <div class="item-title">
+                                    <span>反馈数量：20</span> |
+                                    <span>解决数量：10</span>
+                                    <span class="pull-right wait-status-ok">已完成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/plugins/zepto.js" charset='utf-8'></script>
+<script src="../js/plugins/sm.js" charset='utf-8'></script>
+<script src="../js/plugins/sm-extend.js" charset='utf-8'></script>
+<script type="text/javascript">
+    $.config = {router: false}
+    $.init();
+</script>
+<script>
+    // 添加'refresh'监听器
+    $(document).on('refresh', '.pull-to-refresh-content',function(e) {
+        // 模拟2s的加载过程
+        setTimeout(function() {
+            var cardHTML = '<li class="item-content self-content">' +
+                        '<div class="item-inner self-item-inner">' +
+                        '<div class="item-title-row">' +
+                                '<div class="item-title self-title">' +
+                                    '省学位办反馈张华等20位同学学位报送信息' +
+                                '</div>' +
+                                '</div>' +
+                            '<div class="item-subtitle self-item-subtitle">' +
+                                '2017-04-06 12:00:00' +
+                            '</div>' +
+                            '<div class="item-text self-item-text">' +
+                                '<div class="item-title">' +
+                                    '<span>反馈数量：20</span> |' +
+                                    '<span>解决数量：10</span>' +
+                                    '<span class="pull-right wait-status-ok">已完成</span>' +
+                                '</div></div></div> </li>';
+
+            $(e.target).find('.list-UL').prepend(cardHTML);
+            // 加载完毕需要重置
+            $.pullToRefreshDone('.pull-to-refresh-content');
+        }, 2000);
+    });
+</script>
+</body>
+</html>

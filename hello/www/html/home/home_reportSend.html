@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>学位中心报送平台</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../css/plugins/sm.css">
+    <link rel="stylesheet" href="../../css/plugins/sm-extend.css">
+
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+<body>
+<div class="page-group">
+    <!-- 报送统计子模块 -->
+    <div class="page page-current" id="home-reportSend">
+        <!-- 头部 -->
+        <header class="bar bar-nav self-bg4CA6F7">
+            <a class="icon icon-left pull-left back" style="color: #fff;" href="../home.html"></a>
+            <a class="icon pull-right open-panel" style="max-height: 44px" href="#" data-panel="#wjssb">
+                <span class="icon self-icon self-icon-filter"></span>
+            </a>
+            <h1 class="title home-title">报送统计</h1>
+        </header>
+
+        <!-- 内容 -->
+        <div class="content">
+            <div class="content-block-title text-center self-content-block-title">
+                学位授予信息报送情况汇总表
+            </div>
+            <div class="self-gird">
+                <div class="self-gird-head">
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                合计
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">225</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">120</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">242500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="self-grid-content">
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                北京
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">25</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">20</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">98800</span>
+                        </div>
+                    </div>
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                江苏南京
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">25</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">20</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">98800</span>
+                        </div>
+                    </div>
+                    <div class="row self-row self-grid-row">
+                        <div class="col-31 self-col-25">
+                            <div class="self-grid-title">
+                                浙江杭州
+                            </div>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">授予单位总数</span>
+                            <span class="self-grid-text">25</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">已备案单位</span>
+                            <span class="self-grid-text">20</span>
+                        </div>
+                        <div class="col-23 self-col-25 self-grid-border">
+                            <span class="self-grid-subtitle">备案总数</span>
+                            <span class="self-grid-text">98800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 报送统计筛选右滑子模块 -->
+    <div class="panel-overlay"></div>
+    <!-- 右侧划出窗口内容 -->
+    <div class="panel panel-right panel-reveal theme-white " id="wjssb">
+        <div class="content-block">
+            <!--<p><a href="#" class="close-panel">关闭</a></p>-->
+            <div class="content-block-title reportSend-label">
+                报送时间：
+            </div>
+            <div class="row reportSend-content">
+                <div class="col-40">
+                    <input type="text" placeholder="开始时间">
+                </div>
+                <div class="col-20">
+                    --
+                </div>
+                <div class="col-40">
+                    <input type="text" placeholder="结束时间">
+
+                </div>
+            </div>
+            <div class="content-block-title reportSend-label">
+                学位报送类别：
+            </div>
+            <div class="row reportSend-content">
+                <div class="col-100">
+                    <select>
+                        <option value="">全部</option>
+                        <option value="">不知道</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-block-title reportSend-label">
+                省市区域：
+            </div>
+            <div class="row reportSend-content">
+                <div class="col-100">
+                    <select>
+                        <option value="">全部</option>
+                        <option value="">不知道</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bar bar-tab bar-footer-secondary">
+                <div class="row">
+                    <div class="col-50" >
+                        <a clsss="tab-item" href="#" class="button self-button-link">重置</a>
+                    </div>
+                    <div class="col-50">
+                        <a href="#" class="button button-big button-fill button-success self-button-ok">提交</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../../js/plugins/zepto.js" charset='utf-8'></script>
+<script src="../../js/plugins/sm.js" charset='utf-8'></script>
+<script src="../../js/plugins/sm-extend.js" charset='utf-8'></script>
+<script type="text/javascript">
+    $.config = {router: false};
+
+    $.init();
+
+</script>
+</body>
+</html>

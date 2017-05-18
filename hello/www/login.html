@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录</title>
+    <meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/plugins/sm.css">
+    <link rel="stylesheet" href="css/plugins/sm-extend.css">
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current login-bg" id="login">
+        <div class="content">
+            <div class="content-padded" style="margin: 3.5rem 2rem">
+
+                <div class="self-item-content">
+                    <img class="self-media self-round" src="./images/login/login_logo.png" alt="" width="60px">
+                    <h1 class="self-title self-title-fff">学位备案</h1>
+                </div>
+                <div class="list-block">
+                    <ul class="login-ul">
+                        <li>
+                            <div class="item-content login-item-content">
+                                <div class="item-media">
+                                    <i class="icon self-icon-small self-icon-user"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input id="loginUser" type="text" placeholder="用户名" autocomplete="off" value="123456">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content login-item-content">
+                                <div class="item-media">
+                                    <i class="icon self-icon-small self-icon-passw-empty"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input id="loginPass" type="password" placeholder="密码" maxlength="16" autocomplete="off" value="123456">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content login-item-content">
+                                <div class="item-media">
+                                    <i class="icon self-icon-small  self-icon-vercode"></i>
+                                </div>
+                                <div class="item-inner" style="padding-right: 0">
+                                    <div class="item-input">
+                                        <input id="loginCode" type="text" placeholder="验证码" maxlength="6" autocomplete="off" value="123456">
+                                    </div>
+                                    <!--<div class="item-after">
+                                        <button class="button button-link login-getCode-btn" id="loginGetCode">获取验证码</button>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a class="button button-big button-round login-submit-btn" id="loginBtn" external>登录</a>
+
+
+                <!--<div class="bar bar-footer-secondary login-foot">
+                    <a href="#">忘记密码?</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/plugins/zepto.js" charset='utf-8'></script>
+<script src="js/plugins/sm.js" charset='utf-8'></script>
+<script src="js/plugins/sm-extend.js" charset='utf-8'></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
