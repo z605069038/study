@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <span v-bind:title="message">鼠标悬停几秒可以看到信息</span>
+        <p v-if = 'seen'>这段文字可见可不见</p>
+        <ul v-for="name in names">
+            <li>{{name.xm}}</li>
+        </ul>
+        <input v-model="message">
+        <button v-on:click="opt">神奇的操作</button>
+        <ol>
+            <todo-item v-for="item in items" v-bind:todo="item">
+
+            </todo-item>
+        </ol>
+        <p>{{reversedMessage()}}</p>
+    </div>
+</body>
+<script>
+    Vue.component('todo-item',{
+        props:['todo'],
+        template:'<li>{{todo.text}}</li>'
+    });
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            message:'这是你要看的title',
+            seen:'true',
+            names:[
+                {xm:'123'},
+                {xm:'234'}
+            ],
+            items:[
+                { id: 0, text: '蔬菜' },
+                { id: 1, text: '奶酪' },
+                { id: 2, text: '随便其它什么人吃的东西' }
+            ],
+            userProfile:{},
+        },
+        methods:{
+            opt:function(){
+                this.message = '123';
+                this.seen = false;
+                this.names.push({xm:'你二大爷'});
+            },
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    });
+</script>
+/*
+    动态改变vue中data属性值 数组可以用push、splice等方法 对象单一属性可以用Vue.set(Object,key,value) 多个属性可以用Object.assign()
+*/
+</html>
