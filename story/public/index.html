@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <title>查看我的企业邮箱使用足迹</title>
+    <script>
+      if(!!window.ActiveXObject || "ActiveXObject" in window){
+        document.write('对不起，请在手机浏览器访问该页面');
+      }
+    </script>
+    <script type="text/javascript" src="//mimg.127.net/p/tools/jquery/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="//mimg.127.net/pub/common/js/share.1.0.2.js"></script>
+    <script type="text/javascript" src="https://mimg.127.net/p/freemail/lib/tongji/mail-3.0.0.umd.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but story doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    window.shareConfig = {
+        img: '',
+        wbpic: '',
+        url: window.location.origin + '/rdmailquery/story',
+        desc: "2019已过大半，你留下了哪些痕迹？",
+        title: '查看我的企业邮箱使用足迹',
+        timeline_title: '查看我的企业邮箱使用足迹',
+        wContent: '2019已过大半，你留下了哪些痕迹？',
+        callback: function(successOrNot, shareToWhichSNS) {
+        }
+    };
+    Tongji.init({
+        debug: false,
+        type: 'qiye', // 区分大产品，比如免费邮（main）、企业邮（qiye）、VIP产品（vip）
+        activity: 'qiye_rdmailquery_story' // 这里写登记好的产品号，统计库会根据当前访问的UA来判断client，所以不许要开发者注册clinet属性
+    });
+</script>
+</html>
