@@ -1,0 +1,78 @@
+<html>
+    <body>
+        共52张普通牌，牌面为2,3,4,5,6,7,8,9,10,J,Q,K,A之一，大小递增，各四张；每人抓三张牌。两人比较手中三张牌大小，大的人获胜。
+        对于牌型的规则如下：
+        1.三张牌一样即为豹子
+        2.三张牌相连为顺子（A23不算顺子）
+        3.有且仅有两张牌一样为对子 豹子>顺子>对子>普通牌型 在牌型一样时，比较牌型数值大小（如AAA>KKK,QAK>534，QQ2>10104） 在二人均无特殊牌型时，依次比较三张牌中最大的。大的人获胜，如果最大的牌一样，则比较第二大，以此类推（如37K>89Q） 如二人牌面相同，则为平局
+    </body>
+</html>
+<script>
+function compare(A,B){
+    //首先将A,B转换成数组并做排序
+    var arrayA = formatArray(A.replace(/10/g,'B').toUpperCase());
+    var arrayB = formatArray(B.replace(/10/g,'B').toUpperCase());
+
+    //确定A和B的级别
+    var levelA = level(arrayA);
+    var levelB = level(arrayB);
+
+    //确定各数大小A大true
+    var num1 = arrayA[0]>arrayB[0]?1:(arrayA[0]<arrayB[0]?-1:0);
+    var num2 = arrayA[1]>arrayB[1]?1:(arrayA[1]<arrayB[1]?-1:0);
+    var num3 = arrayA[2]>arrayB[2]?1:(arrayA[2]<arrayB[2]?-1:0);
+    var levelNum = levelA.levelNum>levelB.levelNum?1:(levelA.levelNum<levelB.levelNum?-1:0);
+
+    if(arrayA.indexOf(-1)>0 || arrayB.indexOf(-1)>0){
+        return -2;
+    }else if(levelA.level>levelB.level){
+        return 1;
+    }else if(levelA.level==levelB.level){
+        var res = '';
+        switch(levelA.level){
+            case 1:
+                res = num1 || num2 || num3;
+                break;
+            case 2:
+                res = levelNum || num1 || num2 || num3;
+                break;
+            case 3:
+                res = num1;
+                break;
+            case 4:
+                res = num1;
+                break;
+        }
+        return res;
+    }else{
+        return -1;
+    }
+}
+function formatArray(string){
+    var baseArray = ['0','1','2','3','4','5','6','7','8','9','B','J','Q','K','A'];
+    var array = string.split('');
+    array = array.map(function(value){ return baseArray.indexOf(value)}).sort(function(a,b){return a<=b?1:-1});
+    return array;
+}
+
+function level(array){
+    var levels = [1,2,3,4];
+    if(array[0]==array[1]&&array[0]==array[2]){//豹子
+        return {level:4};
+    }else if(array[0]==array[1] || array[0]==array[2] || array[1]==array[2]){//对子
+        return {level:2,levelNum:array[0]==array[1]?array[0]:(array[0]==array[2]?array[0]:array[1])};
+    }else if(array[0]-array[1]==1&&array[1]-array[2]==1){//顺子
+        return {level:3};
+    }else{//普通牌型
+        return {level:1};
+    }
+}
+
+// console.log('KQ3 3Q9:'+compare('KQ3','3Q9'));
+// console.log('10QA 6102:'+compare('10QA','6102'));
+// console.log('5810 7KK:'+compare('5810','7KK'));
+// console.log('632 74J:'+compare('632','74J'));
+console.log('10102 K77:'+compare('772','577'));
+// console.log('JKJ 926:'+compare('JKJ','926'));
+// console.log('68K 27A:'+compare('68K','27A'));
+</script>
