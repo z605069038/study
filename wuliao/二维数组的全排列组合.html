@@ -1,0 +1,23 @@
+<script>
+    // 测试：
+    var arr = [[1,2,3],[3,4],[5,6,7],[1,2]]
+    let index = 0;
+    function each(n,res){
+        for(let i = 0; i<arr[n].length;i++){
+            if(n==0){
+                var res = [];
+            }
+            if(n<arr.length){
+                var _res = res.slice();
+                _res.push(arr[n][i]);
+                if(n == arr.length - 1){
+                    index ++;
+                }else{
+                    each(n+1,_res)
+                }
+            }
+        }
+    }
+    each(0);
+    console.log(index);
+</script>
