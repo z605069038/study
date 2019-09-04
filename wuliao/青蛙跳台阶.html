@@ -1,0 +1,27 @@
+<script>
+    /*
+        注意 不是求方式的个数，而是打印每种情况 
+        台阶数为10，每次跳1次或两次
+    */
+    step(0);
+    function step(index,res){
+        if(index == 0){
+            res = [];
+        }
+        for(var i =1;i<3;i++){
+            var _res = res.slice();
+            if(index<10){
+                _res.push(i);
+                if(index+i<10){
+                    step(index+i,_res);
+                }else if(index+i==10){
+                    var sum = 0;
+                    for(var j in _res){
+                        sum += _res[j];
+                    }
+                    console.log(_res.join('')+':'+sum);
+                }
+            }
+        }
+    }
+</script>
