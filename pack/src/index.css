@@ -1,0 +1,26 @@
+.footer{
+    height: 74px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer .footer-nav{
+    padding-top: 27px;
+    height: 24px;
+    line-height: 24px;
+}
+.footer .footer-nav a{
+    color: #666;
+    margin-right:10px;
+    font-size: 14px;
+    cursor: inherit;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.footer .footer-nav span{
+    display: inline-block;
+    color: #666;
+    font-size: 12px;
+}
