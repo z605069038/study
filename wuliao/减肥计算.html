@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>日常基础代谢：</p>
+        <p>男性静息代谢率：10 * 体重（kg）+ 6.25 * 身高（cm）- 5 * 年龄+5</p>
+        <p>女性静息代谢率：10 * 体重（kg）+ 6.25 * 身高（cm）- 45 * 年龄-161</p>
+        <ul>
+            <li>运动系数:</li>
+            <li>1.2=静坐的（几乎不锻炼或运动）</li>
+            <li>1.375=轻度活跃（少量锻炼或运动，每周1-3天）</li>
+            <li>1.55=中等活跃（适量锻炼或运动，每周3-5天）</li>
+            <li>1.725=很活跃（大量锻炼或运动，每周6-7天）</li>
+            <li>1.9=极其活跃（高强度锻炼或运动，从事体力劳动）</li>
+        </ul>
+        <p>日常热量消耗 = 基础代谢（静息代谢率）* 运动系数</p>
+        <p>1g脂肪燃烧释放9卡热量</p>
+        <table>
+            <tr>
+                <td>性别</td><td>体重(kg)</td><td>身高(cm)</td><td>年龄</td><td>运动系数</td><td>操作</td><td>日常消耗(卡)</td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input type="radio" name="sex" value="5" checked>男</label>
+                    <label><input type="radio" name="sex" value="45">女</label>
+                </td>
+                <td>
+                    <input type="text" id="weight" value="90">
+                </td>
+                <td>
+                    <input type="text" id="height" value="172">
+                </td>
+                <td>
+                    <input type="text" id="age" value="27">
+                </td>
+                <td>
+                    <input type="text" id="sportCoefficient" value="1.2">
+                </td>
+                <td>
+                    <button id="calc">日常消耗</button>
+                </td>
+                <td id="result"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        $(function(){
+            $('#calc').click(function(){
+                let ageMis = $('input[name="sex"]:checked').val();
+                let w = $('#weight').val();
+                let h = $('#height').val();
+                let age = $('#age').val();
+                let sportCoefficient = $('#sportCoefficient').val();
+                if(w==''){
+                    alert('请输入体重');
+                }else if(h==''){
+                    alert('请输入身高');
+                }else if(age==''){
+                    alert('请输入年龄');
+                }else if(sportCoefficient==''){
+                    alert('请输入运动系数');
+                }
+                let result = (10*w + 6.25*h - ageMis*age + (ageMis==5?5:-161))*sportCoefficient;
+                $('#result').html(result);
+            });
+        })
+    </script>
+</html>
