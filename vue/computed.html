@@ -13,6 +13,8 @@
         <ul>
             <li v-for="n in evenNumbers">{{ n }}</li>
         </ul>
+        <button @click='toggleShow'>Toggle Show Total Price</button>
+        <p v-show="showTotal">Total Price = {{totalPrice}}</p>
     </div>
 </body>
 <script>
@@ -21,7 +23,9 @@
         data: {
             firstName: 'Foo',
             lastName: 'Bar',
-            numbers: [ 1, 2, 3, 4, 5 ]
+            numbers: [ 1, 2, 3, 4, 5 ],
+            showTotal:true,
+            basePrice:100
         },
         computed: {
             fullName: {
@@ -39,6 +43,14 @@
                 return this.numbers.filter(function (number) {
                     return number % 2 === 0
                 })
+            },
+            totalPrice:function(){
+                return this.basePrice +1;
+            }
+        },
+        methods:{
+            toggleShow:function(){
+                this.showTotal = !this.showTotal;
             }
         }
     })
