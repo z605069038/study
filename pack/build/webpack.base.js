@@ -13,7 +13,7 @@ module.exports = env => {
     const base = {
         entry:'./src/index.js',
         output: {
-        filename: "build.js",
+        filename: "js/build.js",
         path: path.resolve(__dirname, "../dist")
         },
         plugins: [
@@ -28,7 +28,7 @@ module.exports = env => {
             !isDev && new MiniCssExtractPlugin({
                 filename: "css/[name].[contentHash].css"
             })
-        ],
+        ].filter(Boolean),
         module: {
             rules: [
                 {

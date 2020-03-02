@@ -6,5 +6,6 @@ module.exports = {
         contentBase:path.resolve(__dirname,'../dist'),
         compress:true, // 开启gzip
         port:3000, // 更改端口号
+        
     }
 }
