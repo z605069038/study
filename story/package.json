@@ -11,7 +11,7 @@
   "dependencies": {
     "@huoyu/vue-digitroll": "^1.0.4",
     "@types/swiper": "^4.4.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "core-js": "^2.6.5",
     "easytoast-f-vue": "^1.0.5",
     "qrcodejs2": "0.0.2",
