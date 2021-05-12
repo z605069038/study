@@ -15,7 +15,7 @@
     "core-js": "^2.6.5",
     "easytoast-f-vue": "^1.0.5",
     "qrcodejs2": "0.0.2",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-class-component": "^7.0.2",
